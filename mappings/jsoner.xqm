@@ -31,8 +31,6 @@ import module namespace G = "synopsx.globals" at '../../../globals.xqm' ;
 import module namespace synopsx.models.synopsx = 'synopsx.models.synopsx' at '../../../models/synopsx.xqm' ;
 import module namespace synopsx.mappings.tei2html = 'synopsx.mappings.tei2html' at '../../../mappings/tei2html.xqm' ;
 
-import module namespace test.mappings.tei2json = 'test.mappings.tei2json' at 'tei2json.xqm' ;
-
 declare namespace html = 'http://www.w3.org/1999/xhtml' ;
 
 declare default function namespace 'test.mappings.jsoner' ;
