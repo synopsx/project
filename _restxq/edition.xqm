@@ -32,7 +32,7 @@ declare default function namespace 'test.edition' ;
  : this resource function redirect to /home
  :)
 declare 
-  %rest:path('/')
+  %rest:path('/test')
 function index() {
   <rest:response>
     <http:response status="303" message="See Other">
@@ -47,7 +47,7 @@ function index() {
  : @return an html home page for the edition
  :)
 declare 
-  %rest:path('/home')
+  %rest:path('/test/home')
   %rest:produces('text/html')
   %output:method("html")
   %output:html-version("5.0")
@@ -75,7 +75,7 @@ function editionHome() {
  : @return an html representation of the corpus resource
  :)
 declare 
-  %rest:path('/corpus')
+  %rest:path('/test/corpus')
   %rest:produces('text/html')
   %output:method('html')
   %output:html-version('5.0')
@@ -129,7 +129,7 @@ function corpusJson() {
  : @return an html representation of the corpus resource
  :)
 declare 
-  %rest:path('/corpus/{$corpusId}')
+  %rest:path('/test/corpus/{$corpusId}')
   %rest:produces('text/html')
   %output:method('html')
   %output:html-version('5.0')
@@ -158,7 +158,7 @@ function corpusItem($corpusId as xs:string) {
  : @return an html representation of the text resource
  :)
 declare 
-  %rest:path('/texts/{$textId}')
+  %rest:path('/test/texts/{$textId}')
   %rest:produces('text/html')
   %output:method('html')
   %output:html-version('5.0')
@@ -187,7 +187,7 @@ function textItems($textId as xs:string) {
  : @return a json toc of the text
  :)
 declare 
-  %rest:path('/texts/{$textId}/toc')
+  %rest:path('/test/texts/{$textId}/toc')
   %rest:produces('application/json')
   %output:media-type('application/json')
   %output:method('json')
@@ -214,7 +214,7 @@ function textItemsTocJson($textId as xs:string) {
  : @return a json toc of the text
  :)
 declare
-  %rest:path('/texts/{$textId}/pagination')
+  %rest:path('/test/texts/{$textId}/pagination')
   %rest:produces('application/json')
   %output:media-type('application/json')
   %output:method('json')
@@ -241,7 +241,7 @@ function textItemsPaginationJson($textId as xs:string) {
  : @return an html representation of the text item
  :)
 declare 
-  %rest:path('/items/{$itemId}')
+  %rest:path('/test/items/{$itemId}')
   %rest:produces('text/html')
   %output:method('html')
   %output:html-version('5.0')
@@ -271,7 +271,7 @@ function items($itemId as xs:string) {
  : @todo use this tag !
  :)
 declare 
-  %rest:path('/model')
+  %rest:path('/test/model')
   %rest:produces('text/html')
   %output:method('html')
   %output:html-version('5.0')
@@ -300,7 +300,7 @@ function model() {
  : @todo use this tag !
  :)
 declare 
-  %rest:path('/about')
+  %rest:path('/test/about')
   %rest:produces('text/html')
   %output:method('html')
   %output:html-version('5.0')
@@ -328,7 +328,7 @@ function about() {
  : @return an html list of indexes
  :)
 declare 
-  %rest:path('/index')
+  %rest:path('/test/index')
   %rest:produces('text/html')
   %output:method('html')
   %output:html-version('5.0')
@@ -355,7 +355,7 @@ function indexes() {
  : @return an html list of indexLocorum entries
  :)
 declare 
-  %rest:path('/indexLocorum')
+  %rest:path('/test/indexLocorum')
   %rest:produces('text/html')
   %output:method('html')
   %output:html-version('5.0')
@@ -393,7 +393,7 @@ function indexLocorum(
  : @return an html representation of an indexLocorum item
  :)
 declare 
-  %rest:path('/indexLocorum/{$itemId}')
+  %rest:path('/test/indexLocorum/{$itemId}')
   %rest:produces('text/html')
   %output:method('html')
   %output:html-version('5.0')
@@ -421,7 +421,7 @@ function indexLocorumItem($itemId) {
  : @return a html list of indexNominum entries
  :)
 declare 
-  %rest:path('/indexNominum')
+  %rest:path('/test/indexNominum')
   %rest:produces('text/html')
   %output:method('html')
   %output:html-version('5.0')
@@ -462,7 +462,7 @@ function indexNominum(
  : @return an html representation of an indexNominum item
  :)
 declare 
-  %rest:path('/indexNominum/{$itemId}')
+  %rest:path('/test/indexNominum/{$itemId}')
   %rest:produces('text/html')
   %output:method('html')
   %output:html-version('5.0')
