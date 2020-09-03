@@ -24,7 +24,7 @@ import module namespace synopsx.models.synopsx = 'synopsx.models.synopsx' at '..
 import module namespace test.models.tei = "test.models.tei" at '../models/tei.xqm' ;
 
 import module namespace synopsx.mappings.htmlWrapping = 'synopsx.mappings.htmlWrapping' at '../../../mappings/htmlWrapping.xqm' ;
-import module namespace gdp.mappings.jsoner = 'gdp.mappings.jsoner' at '../mappings/jsoner.xqm' ;
+import module namespace test.mappings.jsoner = 'test.mappings.jsoner' at '../mappings/jsoner.xqm' ;
 
 declare default function namespace 'test.edition' ;
 
